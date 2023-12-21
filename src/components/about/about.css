@@ -5,7 +5,7 @@
 }
 
 .about__img {
-  width: 350ex;
+  width: 350px;
   border-radius: 1.5rem;
   justify-self: center;
 }
@@ -49,3 +49,52 @@
   text-align: center !important;
   margin-bottom: var(--mb-3);
 }
+
+
+/*========================== BREAKPOINT ==============================*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+  .about__container {
+    grid-template-columns: 1fr;
+    row-gap: 2.5rem;
+  }
+
+  .about__img {
+    width: 220px
+  }
+
+  .about__box {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .about__data {
+    text-align: center;
+  }
+
+  .about__info {
+    justify-content: center;
+  }
+
+  .about__description {
+    padding: 0 5rem;
+    margin-bottom: 0rem;
+  }
+}
+/* For medium devices */
+@media screen and (max-width: 576px) {
+  .about__info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about__description {
+    padding: 0;
+  }
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+  .about__info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
