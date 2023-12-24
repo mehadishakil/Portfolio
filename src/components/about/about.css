@@ -1,3 +1,8 @@
+.about__header {
+  text-align: center !important;
+  margin-bottom: var(--mb-3);
+}
+
 .about__container {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -45,10 +50,7 @@
   margin-bottom: var(--mb-1-2);
 }
 
-.about__header {
-  text-align: center !important;
-  margin-bottom: var(--mb-3);
-}
+
 
 
 /*========================== BREAKPOINT ==============================*/
