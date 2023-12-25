@@ -7,7 +7,7 @@ const Services = () => {
 
   const toggleTab = (index) => {
     setToggleState(index);
-  }
+  };
 
 
   return (
