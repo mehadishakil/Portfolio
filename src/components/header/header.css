@@ -39,7 +39,8 @@
   padding: 0.5rem;
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.active-link {
   background-color: var(--title-color) !important;
   color: var(--container-color) !important;
 }
@@ -50,10 +51,12 @@
   display: none;
 }
 
-/* Active Link */
-.active-link {
-  color: var(--title-color-dark);
+
+/* Change background header */
+.scroll-header {
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 }
+
 
 
 /*========================== BREAKPOINT ==============================*/
