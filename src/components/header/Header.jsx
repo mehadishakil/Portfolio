@@ -1,18 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./header.css";
 
 const Header = () => {
   /*========================== Change Background Header ==============================*/
   window.addEventListener("scroll", function() {
     const header = document.querySelector(".header");
-    // when the scroll is higher than 200 viewport height, add the scroll-header class to a tag with the header tag
     if(this.scrollY >= 80) header.classList.add("scroll-header");
     else header.classList.remove("scroll-header");
   });
-  /*========================== Toggle Menu ==============================*/
   const[Toggle, showMenu] = useState(false);
   const [activeNav, setActiveNav] = useState("#home");
   
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section');
+      const scrollPosition = window.scrollY + 80; // Adjusted for header height
+      let currentSection = '#home'; // Default to home if no section is found
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          currentSection = `#${section.id}`;
+        }
+      });
+      setActiveNav(currentSection);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return(
     <header className="header">
       <nav className="nav container">
@@ -51,10 +70,24 @@ const Header = () => {
             </li>
 
             <li className="nav__item">
+              <a href="#research" onClick={() => setActiveNav('#research')} className={activeNav === "#research" ? "nav__link active-link" : "nav__link"}>
+              <i class="bx bx-book-open nav__icon"></i> Research
+              </a>
+            </li>
+
+            <li className="nav__item">
+              <a href="#blog" onClick={() => setActiveNav('#blog')} className={activeNav === "#blog" ? "nav__link active-link" : "nav__link"}>
+              <i class="bx bxl-blogger nav__icon"></i> Blog
+              </a>
+            </li>
+
+
+            <li className="nav__item">
               <a href="#contact" onClick={() => setActiveNav('#contact')} className={activeNav === "#contact" ? "nav__link active-link" : "nav__link"}>
                 <i className="uil uil-message nav__icon"></i> Contact
               </a>
             </li>
+
           </ul>
 
           <i class="uil uil-times nav__close" onClick={() => showMenu(!Toggle)}></i>

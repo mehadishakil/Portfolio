@@ -18,7 +18,8 @@
 .nav__logo,
 .nav__toggle {
   color: var(--title-color);
-  font-weight: var(--font-medium);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
 }
 
 .nav__list {

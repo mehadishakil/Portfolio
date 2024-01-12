@@ -16,7 +16,7 @@ export const projectsData = [
 {
   id: 2,
   image: Work2,
-  title: 'App movil', 
+  title: 'App mobile', 
   category: 'android',
 },
 {
@@ -28,7 +28,7 @@ export const projectsData = [
 {
   id: 4,
   image: Work4,
-  title: 'App movil', 
+  title: 'App mobile', 
   category: 'ios',
 },
 {
