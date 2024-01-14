@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const ResearchItem = ({ item }) => {
   const [toggleState, setToggleState] = useState(0);
@@ -16,11 +16,16 @@ const ResearchItem = ({ item }) => {
         </div>
       </span>
 
-      <div className={toggleState === 1 ? "papers__modal active-modal" : "papers__modal"}>
+      <div
+        className={
+          toggleState === 1 ? "papers__modal active-modal" : "papers__modal"
+        }
+      >
         <div className="papers__modal-content">
           <i onClick={() => toggleTab(0)} className="uil uil-times papers__modal-close"></i>
           <h3 className="papers__modal-title">{item.title}</h3>
           <p className="papers__modal-description">{item.description}</p>
+            <a href={item.link} target="_blank" className="paper__link-button"> Read Full Paper <i className="bx bx-right-arrow-alt work__button-icon"></i></a>
         </div>
       </div>
     </div>

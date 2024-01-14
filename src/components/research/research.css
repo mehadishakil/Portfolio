@@ -1,7 +1,6 @@
 .research__header {
   text-align: center !important;
   margin-bottom: var(--mb-3);
-<<<<<<< HEAD
 }
 
 .paper__filters {
@@ -92,6 +91,15 @@
 
 
 /*=======================================================================*/
+.paper__link-button {
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+  display: flex;
+  align-items: center;
+  column-gap: 0.25rem;
+}
+
+
 .papers__container {
   grid-template-columns: repeat(3, 270px);
   justify-content: center;
@@ -207,6 +215,7 @@
   font-size: var(--small-font-size);
 }
 
+
 /* Active Modal*/
 .active-modal {
   opacity: 1;
@@ -275,6 +284,4 @@
   .paper__filters {
     column-gap: 0.25rem;
   }
-=======
->>>>>>> b8114e401e25bddfa32284b3618cc0e0097eade2
 }
