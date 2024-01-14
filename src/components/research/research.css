@@ -1,6 +1,7 @@
 .research__header {
   text-align: center !important;
   margin-bottom: var(--mb-3);
+<<<<<<< HEAD
 }
 
 .paper__filters {
@@ -274,4 +275,6 @@
   .paper__filters {
     column-gap: 0.25rem;
   }
+=======
+>>>>>>> b8114e401e25bddfa32284b3618cc0e0097eade2
 }

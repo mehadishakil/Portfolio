@@ -71,13 +71,21 @@ const Header = () => {
 
             <li className="nav__item">
               <a href="#research" onClick={() => setActiveNav('#research')} className={activeNav === "#research" ? "nav__link active-link" : "nav__link"}>
+<<<<<<< HEAD
               <i class="uil uil-book-open nav__icon"></i> Research
+=======
+              <i class="bx bx-book-open nav__icon"></i> Research
+>>>>>>> b8114e401e25bddfa32284b3618cc0e0097eade2
               </a>
             </li>
 
             <li className="nav__item">
               <a href="#blog" onClick={() => setActiveNav('#blog')} className={activeNav === "#blog" ? "nav__link active-link" : "nav__link"}>
+<<<<<<< HEAD
               <i class="uil uil-blogger nav__icon"></i> Blog
+=======
+              <i class="bx bxl-blogger nav__icon"></i> Blog
+>>>>>>> b8114e401e25bddfa32284b3618cc0e0097eade2
               </a>
             </li>
 
